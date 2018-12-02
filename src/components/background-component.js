@@ -26,7 +26,6 @@ class Background extends React.Component {
     }
 
     tick() {
-        //this.state.cubes.splice()
         this.setState(function (state, props) {
             let stateSnap = state.cubes;
             let needSplice = []
@@ -39,12 +38,6 @@ class Background extends React.Component {
             for (let i = 0; i < needSplice.length; i++) {
                 stateSnap.splice(i, 1);
             }
-            /*
-            stateSnap.push({
-                duration: getRandomIntInclusive(5, 25), id: getRandomIntInclusive(0, 1000),
-                beginDate: new Date()
-            });
-            */
             return {
                 cubes: stateSnap
             }
