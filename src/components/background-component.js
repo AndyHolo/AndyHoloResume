@@ -3,14 +3,15 @@ import './background.sass';
 import getRandomIntInclusive from '../lib'
 
 class Background extends React.Component {
+    id = 0;
+
     constructor(props) {
         super(props);
         let cubes = [];
-        for (let i = 0; i < 10; i++) {
-            let randomDuration = getRandomIntInclusive(5, 25);
+        for (let i = 0; i < 3; i++) {
             cubes.push({
-                duration: randomDuration,
-                id: getRandomIntInclusive(0, 1000),
+                duration: getRandomIntInclusive(5, 25),
+                id: this.id++,
                 beginDate: new Date()
             })
         }
@@ -20,23 +21,56 @@ class Background extends React.Component {
     }
 
     componentDidMount() {
-        this.timerID = setInterval(() => {
-            this.tick();
+        this.addTimer = setInterval(() => {
+            this.addCubes();
         }, 4000);
+        this.deleteTimer = setInterval(() => {
+            this.deleteCubes();
+        }, 1000);
     }
 
-    tick() {
+    addCubes() {
+        if (this.state.cubes.length < 3) {
+            for (let i = 0; i < getRandomIntInclusive(1, 5); i++) {
+                setTimeout(() => {
+                    this.setState(function (state, props) {
+                        let stateSnap = state.cubes.slice();
+                        stateSnap.push({
+                            duration: getRandomIntInclusive(5, 25),
+                            id: this.id++,
+                            beginDate: new Date()
+                        });
+                        return {
+                            cubes: stateSnap
+                        }
+                    })
+                }, getRandomIntInclusive(0, 4000));
+            }
+        }
+    }
+
+    deleteCubes() {
+        //this.state.cubes.findIndex
         this.setState(function (state, props) {
-            let stateSnap = state.cubes;
+            let stateSnap = state.cubes.slice();
             let needSplice = []
             for (let i = 0; i < stateSnap.length; i++) {
                 let endDate = stateSnap[i].beginDate.valueOf() + (stateSnap[i].duration * 1000);
                 if (new Date() > endDate) {
-                    needSplice.push(i);
+                    needSplice.push(stateSnap[i].id);
                 }
             }
             for (let i = 0; i < needSplice.length; i++) {
-                stateSnap.splice(i, 1);
+                let spliceIndex = stateSnap.findIndex(value => {
+                    if (value.id === needSplice[i]) {
+                        return true;
+                    } else {
+                        return false;
+                    }
+                });
+                if (spliceIndex !== -1) {
+                    stateSnap.splice(spliceIndex, 1);
+                }
             }
             return {
                 cubes: stateSnap

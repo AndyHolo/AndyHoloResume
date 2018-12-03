@@ -1,22 +1,21 @@
 .background
-    width: 100%
-    height: 100%
+    width: 100vw
+    height: 100vh
     background: linear-gradient(to bottom right, #50a3a2 0%, #2eca7f 100%)
     position: absolute
     overflow: hidden
 
 .cube
     color: #626262
-    background: rgba(255,255,255,0.1)
+    background: rgba(255,255,255,0.2)
     animation-name: vertical-move
-    animation-duration: 10s
     animation-timing-function: linear
-    position: relative
-    top: 100%
-    overflow: hidden
+    position: absolute
+    top: -50%
+    border-radius: 50%
     
 @keyframes vertical-move
     0%
         top: 100%
     100%
-        top: -20%
+        top: -15em
