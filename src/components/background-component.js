@@ -90,7 +90,7 @@ class Cube extends React.Component {
             height: this.state.width,
             width: this.state.width,
             animationDuration: props.duration + 's',
-            left: Math.random() * 100 + '%'
+            left: getRandomIntInclusive(0, 95) + '%'
         }
     }
 
