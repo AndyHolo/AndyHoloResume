@@ -7,17 +7,10 @@ class Background extends React.Component {
 
     constructor(props) {
         super(props);
-        let cubes = [];
-        for (let i = 0; i < 3; i++) {
-            cubes.push({
-                duration: getRandomIntInclusive(5, 25),
-                id: this.id++,
-                beginDate: new Date()
-            })
-        }
         this.state = {
-            cubes: cubes
+            cubes: []
         }
+        this.addCubes();
     }
 
     componentDidMount() {
@@ -83,7 +76,7 @@ class Background extends React.Component {
         return (
             <div className="background">
                 {this.state.cubes.map((props) =>
-                    <Cube duration={props.duration} key={props.id}></Cube>)};
+                    <Cube duration={props.duration} key={props.id}></Cube>)}
             </div>
         )
     }
