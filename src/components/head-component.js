@@ -1,9 +1,19 @@
 import React from 'react';
-class Head extends React.Component{
-    render(){
-        return(
-            <div>
-                <h1>AndyHolo</h1>
+import './head-component.sass'
+
+class Head extends React.Component {
+    constructor(props) {
+        super(props);
+        this.headStyle = {
+            width: props.headSize,
+            height: props.headSize
+        }
+    }
+
+    render() {
+        return (
+            <div className="head-component">
+                <img className="head-img" src={this.props.imgSrc} style={this.headStyle} alt="headIcon"></img>
             </div>
         )
     }

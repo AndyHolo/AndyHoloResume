@@ -6,3 +6,5 @@ class BigIconTitle extends React.Component {
 
     }
 }
+
+export default BigIconTitle;
