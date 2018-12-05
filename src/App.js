@@ -5,7 +5,11 @@ import headimg from './assets/head.jpeg';
 import Cube from './components/cube-component';
 import getRandomIntInclusive from './lib'
 import BigIconTitle from './components/big-icon-title';
-import Face from '@material-ui/icons/Face';
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faAddressCard } from '@fortawesome/free-solid-svg-icons'
+
+library.add(faAddressCard)
 
 class App extends Component {
     id = 0;
@@ -89,7 +93,7 @@ class App extends Component {
                 </div>
                 <div>
                     <BigIconTitle title="self introduction">
-                        <Face></Face>
+                        <FontAwesomeIcon icon="address-card" className="icon"></FontAwesomeIcon>
                     </BigIconTitle>
                 </div>
                 {this.state.cubes.map((props) =>
