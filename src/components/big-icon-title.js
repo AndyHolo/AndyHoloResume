@@ -1,5 +1,6 @@
 import React from 'react';
 import './big-icon-title.sass';
+import LineBreaker from './line-breaker';
 
 class BigIconTitle extends React.Component {
     render() {
@@ -11,6 +12,7 @@ class BigIconTitle extends React.Component {
                 <span className="title">
                     <span>{this.props.title}</span>
                 </span>
+                <LineBreaker></LineBreaker>
             </div>
         )
     }

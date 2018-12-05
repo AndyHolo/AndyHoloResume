@@ -5,10 +5,10 @@ import headimg from './assets/head.jpeg';
 import Cube from './components/cube-component';
 import getRandomIntInclusive from './lib'
 import BigIconTitle from './components/big-icon-title';
-import { library } from '@fortawesome/fontawesome-svg-core'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faAddressCard } from '@fortawesome/free-solid-svg-icons'
-
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faAddressCard } from '@fortawesome/free-solid-svg-icons';
+ 
 library.add(faAddressCard)
 
 class App extends Component {
