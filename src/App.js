@@ -8,7 +8,7 @@ import BigIconTitle from './components/big-icon-title';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAddressCard } from '@fortawesome/free-solid-svg-icons';
- 
+
 library.add(faAddressCard)
 
 class App extends Component {
@@ -46,7 +46,7 @@ class App extends Component {
                             cubes: stateSnap
                         }
                     })
-                }, getRandomIntInclusive(0, 4000));
+                }, getRandomIntInclusive(500, 6000));
             }
         }
     }
@@ -91,10 +91,13 @@ class App extends Component {
                     <p>Sun raise from the west</p>
                     <p>and the earth get even darker.</p>
                 </div>
-                <div>
-                    <BigIconTitle title="self introduction">
+                <div className="introduce">
+                    <BigIconTitle title="A brief self introduction">
                         <FontAwesomeIcon icon="address-card" className="icon"></FontAwesomeIcon>
                     </BigIconTitle>
+                    <p className="introduce-content">I am an energetic developer that always have willing to learn new techniques.
+                    I have 3 years experiences in both fontend and backend
+                    </p>
                 </div>
                 {this.state.cubes.map((props) =>
                     <Cube duration={props.duration} key={props.id}></Cube>)}
