@@ -8,7 +8,10 @@ import BigIconTitle from './components/big-icon-title';
 import { Titleboard } from './components/title-board';
 import { MdFace } from 'react-icons/md';
 import { MdBuild } from 'react-icons/md';
-import { MdWeb } from 'react-icons/md';
+import { IoMdGlobe } from 'react-icons/io';
+import { IoMdConstruct } from 'react-icons/io';
+import { FaLinux } from 'react-icons/fa';
+import {FaDatabase} from 'react-icons/fa';
 
 class App extends Component {
     id = 0;
@@ -21,6 +24,7 @@ class App extends Component {
         this.addCubes();
     }
 
+    /*
     componentDidMount() {
         this.addTimer = setInterval(() => {
             this.addCubes();
@@ -29,6 +33,7 @@ class App extends Component {
             this.deleteCubes();
         }, 1000);
     }
+    */
 
     addCubes() {
         if (this.state.cubes.length < 3) {
@@ -83,29 +88,42 @@ class App extends Component {
         console.log(this.state);
         return (
             <div className="page">
-                <div className="head">
-                    <Head imgSrc={headimg} headSize="8em"></Head>
-                </div>
-                <div className="note">
-                    <p>Sun raised from the west</p>
-                    <p>and the earth get even darker.</p>
-                </div>
-                <div className="title">
-                    <BigIconTitle title="A brief self introduction">
-                        <MdFace className="icon"></MdFace>
-                    </BigIconTitle>
-                    <p className="introduce-content">I am an energetic developer that always have willing to learn new techniques.
-                    I have 3 years experiences in both fontend and backend. I am familiar with Angular,React,PostgreSQL,Spring,Linux
-                    and much more...
+                <div className="page-content">
+                    <div className="head">
+                        <Head imgSrc={headimg} headSize="8em"></Head>
+                    </div>
+                    <div className="note">
+                        <p>Sun raised from the west</p>
+                        <p>and the earth get even darker.</p>
+                    </div>
+                    <div className="title">
+                        <BigIconTitle title="A brief self introduction">
+                            <MdFace className="icon"></MdFace>
+                        </BigIconTitle>
+                        <p className="introduce-content">I am an energetic developer that always have willing to learn new techniques.
+                        I have 3 years experiences in both fontend and backend. I am familiar with Angular,React,PostgreSQL,Spring,Linux
+                        and much more...
                     </p>
-                </div>
-                <div className="title">
-                    <BigIconTitle title="Skills">
-                        <MdBuild className="icon"></MdBuild>
-                    </BigIconTitle>
-                    <Titleboard content="Web development skills">
-                        <MdWeb></MdWeb>
-                    </Titleboard>
+                    </div>
+                    <div className="title">
+                        <BigIconTitle title="Skills">
+                            <MdBuild className="icon"></MdBuild>
+                        </BigIconTitle>
+                        <div className="content">
+                            <Titleboard width="12em" content="web development skills">
+                                <IoMdGlobe></IoMdGlobe>
+                            </Titleboard>
+                            <Titleboard width="12em" content="server side development skills">
+                                <IoMdConstruct></IoMdConstruct>
+                            </Titleboard>
+                            <Titleboard width="12em" content="sql/no-sql skills">
+                                <FaDatabase></FaDatabase>
+                            </Titleboard>
+                            <Titleboard width="12em" content="system operation skills">
+                                <FaLinux></FaLinux>
+                            </Titleboard>
+                        </div>
+                    </div>
                 </div>
                 {this.state.cubes.map((props) =>
                     <Cube duration={props.duration} key={props.id}></Cube>)}

@@ -1,15 +1,22 @@
 import React from 'react';
-import './icon-panel.sass';
+import './title-board.sass';
 
-class Titleboard extends React.Component {
+export class Titleboard extends React.Component {
+    constructor(props) {
+        super(props);
+        this.titleBoardStyle = {
+            width: props.width,
+        }
+    }
+
     render() {
         return (
-            <div className="icon-panel">
-                <div className="icon">
+            <div className="title-board" style={this.titleBoardStyle}>
+                <div className="title-board-icon">
                     {this.props.children}
                 </div>
-                <div className="content">
-                    <p className="content-text">
+                <div className="title-board-content">
+                    <p className="title-board-content-text">
                         {this.props.content}
                     </p>
                 </div>
