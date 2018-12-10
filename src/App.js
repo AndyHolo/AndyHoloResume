@@ -11,7 +11,8 @@ import { MdBuild } from 'react-icons/md';
 import { IoMdGlobe } from 'react-icons/io';
 import { IoMdConstruct } from 'react-icons/io';
 import { FaLinux } from 'react-icons/fa';
-import {FaDatabase} from 'react-icons/fa';
+import { FaDatabase } from 'react-icons/fa';
+import { SkillBar } from './components/skill-bar';
 
 class App extends Component {
     id = 0;
@@ -103,7 +104,7 @@ class App extends Component {
                         <p className="introduce-content">I am an energetic developer that always have willing to learn new techniques.
                         I have 3 years experiences in both fontend and backend. I am familiar with Angular,React,PostgreSQL,Spring,Linux
                         and much more...
-                    </p>
+                        </p>
                     </div>
                     <div className="title">
                         <BigIconTitle title="Skills">
@@ -123,6 +124,9 @@ class App extends Component {
                                 <FaLinux></FaLinux>
                             </Titleboard>
                         </div>
+                    </div>
+                    <div className="skill-board">
+                        <SkillBar title="Angular: "></SkillBar>
                     </div>
                 </div>
                 {this.state.cubes.map((props) =>
