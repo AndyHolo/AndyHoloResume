@@ -126,7 +126,7 @@ class App extends Component {
                         </div>
                     </div>
                     <div className="skill-board">
-                        <SkillBar title="Angular: "></SkillBar>
+                        <SkillBar title="Angular: " skillValue="80" color="lightgreen"></SkillBar>
                     </div>
                 </div>
                 {this.state.cubes.map((props) =>
