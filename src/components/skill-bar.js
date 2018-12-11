@@ -13,7 +13,9 @@ export class SkillBar extends React.Component {
     render() {
         return (
             <div className="skill-bar">
-                <label className="label">{this.props.title}</label>
+                <div className="label">
+                    <img alt="logo" src={this.props.logoSrc} className="label-img"></img>
+                </div>
                 <div className="bar">
                     <div className="bar-content" style={this.styles}></div>
                 </div>

@@ -13,6 +13,8 @@ import { IoMdConstruct } from 'react-icons/io';
 import { FaLinux } from 'react-icons/fa';
 import { FaDatabase } from 'react-icons/fa';
 import { SkillBar } from './components/skill-bar';
+import reactLogo from './logo.svg';
+import angularLogo from './assets/angular.svg';
 
 class App extends Component {
     id = 0;
@@ -126,7 +128,11 @@ class App extends Component {
                         </div>
                     </div>
                     <div className="skill-board">
-                        <SkillBar title="Angular: " skillValue="80" color="lightgreen"></SkillBar>
+                        <SkillBar logoSrc={angularLogo} skillValue="80" color="lightgreen"></SkillBar>
+                        <SkillBar logoSrc={reactLogo} skillValue="50" color="#dadc61"></SkillBar>
+                        <SkillBar logoSrc={reactLogo} skillValue="50" color="#dadc61"></SkillBar>
+                        <SkillBar logoSrc={reactLogo} skillValue="50" color="#dadc61"></SkillBar>
+                        <SkillBar logoSrc={reactLogo} skillValue="50" color="#dadc61"></SkillBar>
                     </div>
                 </div>
                 {this.state.cubes.map((props) =>
