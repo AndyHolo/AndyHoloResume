@@ -13,6 +13,7 @@ import { IoMdConstruct } from 'react-icons/io';
 import { FaLinux } from 'react-icons/fa';
 import { FaDatabase } from 'react-icons/fa';
 import { SkillBar } from './components/skill-bar';
+import { Board } from './components/board';
 import reactLogo from './logo.svg';
 import angularLogo from './assets/angular.svg';
 
@@ -127,6 +128,7 @@ class App extends Component {
                             </Titleboard>
                         </div>
                     </div>
+                    <Board></Board>
                     <div className="skill-board">
                         <SkillBar logoSrc={angularLogo} skillValue="80" color="lightgreen"></SkillBar>
                         <SkillBar logoSrc={reactLogo} skillValue="50" color="#dadc61"></SkillBar>
