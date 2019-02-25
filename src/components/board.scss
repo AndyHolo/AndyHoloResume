@@ -4,4 +4,15 @@
     background-color: darkcyan;
     height: 45%;
     box-sizing: border-box;
+    grid-template-columns: 1fr 4fr 1fr;
+    grid-gap: 10px;
+    .left-arrow{
+        grid-column: 1/10;
+    }
+    .content{
+        grid-column: 8/10;
+    }
+    .right-arrow{
+        grid-column: 1/10;
+    }
 }
