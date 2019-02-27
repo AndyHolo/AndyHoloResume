@@ -1,21 +1,17 @@
 .board{
     display: grid;
     width: 100%;
-    background-color: darkcyan;
-    height: 45%;
+    height: 35em;
     box-sizing: border-box;
     grid-gap: 10px;
+    background: center no-repeat url("../assets/lerone-pieters-1395410-unsplash.jpg");
     .left-arrow{
         grid-column: 1/2;
-        background-color: aquamarine;
     }
     .content{
         grid-column: 2/15;
-        grid-row: 1;
-        background-color: aquamarine;
     }
     .right-arrow{
         grid-column: 15/16;
-        background-color: aquamarine
     }
 }

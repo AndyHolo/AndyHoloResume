@@ -1,8 +1,16 @@
 import React from 'react';
 import './board.scss';
+import webBg from '../assets/lerone-pieters-1395410-unsplash.jpg';
 
 export class Board extends React.Component {
-    toLeft(){
+    constructor(props) {
+        super(props);
+        this.state = {
+            contentImg: webBg
+        };
+    }
+
+    toLeft() {
         console.log('toLeft')
     }
 
