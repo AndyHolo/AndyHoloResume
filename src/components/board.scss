@@ -10,8 +10,19 @@
     }
     .content{
         grid-column: 2/15;
+        background: rgba(255, 255, 255, 0.35);
+        border-radius: 3px;
+        box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+        top: 2em;
+        position: relative;
+        height: 90%;
+        
     }
     .right-arrow{
         grid-column: 15/16;
     }
+}
+.content{
+    top: 10px;
+    position: relative;
 }

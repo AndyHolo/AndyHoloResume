@@ -34,10 +34,12 @@ export class Board extends React.Component {
 
     render() {
         return (
-            <div className="board" style={this.boardStyle}>
-                <div className="left-arrow" onClick={this.toLeft.bind(this)}></div>
-                <div className="content"></div>
-                <div className="right-arrow" onClick={this.toRight.bind(this)}></div>
+            <div>
+                <div className="board" style={this.boardStyle}>
+                    <div className="left-arrow" onClick={this.toLeft.bind(this)}></div>
+                    <div className="content"></div>
+                    <div className="right-arrow" onClick={this.toRight.bind(this)}></div>
+                </div>
             </div>
         )
     }
