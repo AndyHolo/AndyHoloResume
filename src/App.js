@@ -113,20 +113,6 @@ class App extends Component {
                         <BigIconTitle title="Skills">
                             <MdBuild className="icon"></MdBuild>
                         </BigIconTitle>
-                        <div className="content">
-                            <Titleboard width="12em" content="web development skills">
-                                <IoMdGlobe></IoMdGlobe>
-                            </Titleboard>
-                            <Titleboard width="12em" content="server side development skills">
-                                <IoMdConstruct></IoMdConstruct>
-                            </Titleboard>
-                            <Titleboard width="12em" content="sql/no-sql skills">
-                                <FaDatabase></FaDatabase>
-                            </Titleboard>
-                            <Titleboard width="12em" content="system operation skills">
-                                <FaLinux></FaLinux>
-                            </Titleboard>
-                        </div>
                     </div>
                     <Board></Board>
                     <div className="skill-board">

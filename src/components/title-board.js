@@ -1,5 +1,5 @@
 import React from 'react';
-import './title-board.sass';
+import './title-board.scss';
 
 export class Titleboard extends React.Component {
     constructor(props) {

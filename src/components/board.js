@@ -3,6 +3,8 @@ import './board.scss';
 import bg1 from '../assets/alex-1395165-unsplash.jpg';
 import bg2 from '../assets/oakie-1393809-unsplash.jpg';
 import bg3 from '../assets/zdenek-machacek-1396821-unsplash.jpg';
+import TitleBoard from './title-board';
+import { IoMdGlobe } from 'react-icons/io';
 
 export class Board extends React.Component {
     constructor(props) {
@@ -37,7 +39,9 @@ export class Board extends React.Component {
             <div>
                 <div className="board" style={this.boardStyle}>
                     <div className="left-arrow" onClick={this.toLeft.bind(this)}></div>
-                    <div className="content"></div>
+                    <div className="content">
+                        <TitleBoard width="12em" content="Web development skills"><IoMdGlobe></IoMdGlobe></TitleBoard>
+                    </div>
                     <div className="right-arrow" onClick={this.toRight.bind(this)}></div>
                 </div>
             </div>
