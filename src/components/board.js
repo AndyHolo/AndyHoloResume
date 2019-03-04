@@ -40,7 +40,7 @@ export class Board extends React.Component {
                 <div className="board" style={this.boardStyle}>
                     <div className="left-arrow" onClick={this.toLeft.bind(this)}></div>
                     <div className="content">
-                        <TitleBoard width="12em" content="Web development skills"><IoMdGlobe></IoMdGlobe></TitleBoard>
+                        <TitleBoard content="Web development skills"><IoMdGlobe></IoMdGlobe></TitleBoard>
                     </div>
                     <div className="right-arrow" onClick={this.toRight.bind(this)}></div>
                 </div>
