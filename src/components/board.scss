@@ -17,6 +17,9 @@
         position: relative;
         height: 90%;
         text-align: center;
+        .content-body{
+            display: flex;
+        }
     }
     .right-arrow{
         grid-column: 15/16;

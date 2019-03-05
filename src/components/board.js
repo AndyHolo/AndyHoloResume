@@ -4,7 +4,9 @@ import bg1 from '../assets/alex-1395165-unsplash.jpg';
 import bg2 from '../assets/oakie-1393809-unsplash.jpg';
 import bg3 from '../assets/zdenek-machacek-1396821-unsplash.jpg';
 import TitleBoard from './title-board';
+import RoundSkillBar from './round-skill-bar';
 import { IoMdGlobe } from 'react-icons/io';
+import reactLogo from '../logo.svg';
 
 export class Board extends React.Component {
     constructor(props) {
@@ -41,6 +43,9 @@ export class Board extends React.Component {
                     <div className="left-arrow" onClick={this.toLeft.bind(this)}></div>
                     <div className="content">
                         <TitleBoard content="Web development skills"><IoMdGlobe></IoMdGlobe></TitleBoard>
+                        <div className="content-body">
+                            <RoundSkillBar roundSize="5em" logoSrc={reactLogo}></RoundSkillBar>
+                        </div>
                     </div>
                     <div className="right-arrow" onClick={this.toRight.bind(this)}></div>
                 </div>
