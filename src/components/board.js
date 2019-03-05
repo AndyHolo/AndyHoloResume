@@ -44,7 +44,7 @@ export class Board extends React.Component {
                     <div className="content">
                         <TitleBoard content="Web development skills"><IoMdGlobe></IoMdGlobe></TitleBoard>
                         <div className="content-body">
-                            <RoundSkillBar roundSize="5em" logoSrc={reactLogo}></RoundSkillBar>
+                            <RoundSkillBar roundSize="5" logoSrc={reactLogo} title="ReactJS" barWidth="15vw" skillValue="50" color="lightblue"></RoundSkillBar>
                         </div>
                     </div>
                     <div className="right-arrow" onClick={this.toRight.bind(this)}></div>

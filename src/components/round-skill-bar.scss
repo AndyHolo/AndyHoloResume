@@ -1,6 +1,21 @@
 .round-skill{
+    display: inline-flex;
     .icon{
         border-radius: 50%;
         border: 2px solid lightblue;
+    }
+    .label{
+        margin-left: 2em;
+        .label-title{
+            text-align: left;
+            font-size: 1.5em;
+        }
+        .label-bar{
+            height: 0.5em;
+            background: rgba(255,255,255,0.3);
+            .bar-content{
+                height:0.5em
+            }
+        }
     }
 }
