@@ -6,19 +6,20 @@ export class RoundSkillBar extends React.Component {
         super(props);
         this.styles = {
             width: props.roundSize + 'em',
-            height: props.roundSize + 'em'
+            height: props.roundSize + 'em',
+            border: '3px solid ' + props.color
         }
         this.iconStyles = {
             width: props.roundSize + 'em',
             height: props.roundSize + 'em'
         }
         this.labelStyles = {
-            lineHeight: (props.roundSize - 1.5) + 'em',
+            lineHeight: (props.roundSize - 2.5) + 'em',
             height: props.roundSize + 'em',
-            width: props.barWidth
+            width: props.barWidth + 'vw'
         }
         this.barContentStyles = {
-            width: ((props.skillValue / 100) * 20) + 'em',
+            width: ((props.skillValue / 100) * props.barWidth) + 'vw',
             backgroundColor: props.color
         }
     }

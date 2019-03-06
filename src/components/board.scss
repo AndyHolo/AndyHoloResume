@@ -3,26 +3,40 @@
     width: 100%;
     height: 40em;
     box-sizing: border-box;
-    grid-gap: 10px;
+    grid-template-columns: repeat(10, 1fr);
     background-size: cover;
+    background-attachment: fixed;
     .left-arrow{
         grid-column: 1/2;
     }
     .content{
-        grid-column: 2/15;
+        grid-column: 2/10;
         background: rgba(255, 255, 255, 0.45);
         border-radius: 3px;
         box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
         top: 2em;
         position: relative;
-        height: 90%;
+        height: 85%;
         text-align: center;
-        .content-body{
-            display: flex;
+        overflow: hidden;
+        .content-body-fa{
+            height: inherit;
+            overflow: hidden;
+            height: 80%;
+            width: 100%;
+            .content-body{
+                display: flex;
+                justify-content: space-around;
+                flex-wrap: wrap;
+                align-content: space-around;
+                height: 103%;
+                width: 102%;
+                overflow: scroll;
+            }
         }
     }
     .right-arrow{
-        grid-column: 15/16;
+        grid-column: 10/10;
     }
 }
 .content{
