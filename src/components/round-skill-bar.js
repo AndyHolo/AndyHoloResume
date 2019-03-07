@@ -22,6 +22,16 @@ export class RoundSkillBar extends React.Component {
             width: ((props.skillValue / 100) * props.barWidth) + 'vw',
             backgroundColor: props.color
         }
+        if (props.iconTop !== undefined && props.iconTop !== null) {
+            this.iconStyles['top'] = props.iconTop + 'em';
+        }
+        if (props.iconHeight !== undefined && props.iconHeight !== null) {
+            console.log('have iconHeight');
+            this.iconStyles.height = props.iconHeight + 'em';
+        }
+        if (props.iconWidth !== undefined && props.iconWidth !== null) {
+            this.iconStyles.width = props.iconWidth + 'em';
+        }
     }
     render() {
         return (

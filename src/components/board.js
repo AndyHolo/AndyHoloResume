@@ -12,8 +12,9 @@ import javascriptLogo from '../assets/javascript.svg';
 import reactLogo from '../logo.svg';
 import angularLogo from '../assets/angular.svg';
 import javaLogo from '../assets/java.svg';
-import {IoMdPulse} from 'react-icons/io';
-import springLogo from '../assets/spring.svg'
+import { IoMdPulse } from 'react-icons/io';
+import springLogo from '../assets/spring.svg';
+import vertxLogo from '../assets/vert-x.png';
 
 export class Board extends React.Component {
     constructor(props) {
@@ -61,6 +62,8 @@ export class Board extends React.Component {
                             barWidth="14" skillValue="50" color="#61dafb"></RoundSkillBar>
                         <RoundSkillBar roundSize="8" logoSrc={angularLogo} title="Angular"
                             barWidth="14" skillValue="90" color="rgb(218, 56, 56)"></RoundSkillBar>
+                        <RoundSkillBar roundSize="8" logoSrc={vertxLogo} title="Vert.X" iconTop='1' iconHeight='5'
+                            barWidth="14" skillValue="40" color="rgb(247, 223, 30)" iconWidth="8"></RoundSkillBar>
                     </div>
                 </div>);
                 break;
@@ -73,8 +76,8 @@ export class Board extends React.Component {
                             barWidth="14" skillValue="75" color="rgb(241, 101, 41)"></RoundSkillBar>
                         <RoundSkillBar roundSize="8" logoSrc={springLogo} title="Spring"
                             barWidth="14" skillValue="50" color="rgb(41, 101, 241)"></RoundSkillBar>
-                        <RoundSkillBar roundSize="8" logoSrc={javascriptLogo} title="JavaScript"
-                            barWidth="14" skillValue="75" color="rgb(247, 223, 30)"></RoundSkillBar>
+                        <RoundSkillBar roundSize="8" logoSrc={vertxLogo} title="Vert.X" iconTop='1' iconHeight='5'
+                            barWidth="14" skillValue="40" color="rgb(247, 223, 30)" iconWidth="8"></RoundSkillBar>
                         <RoundSkillBar roundSize="8" logoSrc={reactLogo} title="ReactJS"
                             barWidth="14" skillValue="50" color="#61dafb"></RoundSkillBar>
                         <RoundSkillBar roundSize="8" logoSrc={angularLogo} title="Angular"
