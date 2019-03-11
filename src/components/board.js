@@ -20,6 +20,7 @@ import nodejsLogo from '../assets/nodejs.svg';
 import golangLogo from '../assets/golang.svg';
 import { IoLogoTux } from 'react-icons/io';
 import dockerLogo from '../assets/docker.png';
+import ubuntuLogo from '../assets/ubuntu.svg';
 
 export class Board extends React.Component {
     constructor(props) {
@@ -95,8 +96,10 @@ export class Board extends React.Component {
                 contentTitle = <TitleBoard content="System administration skills"><IoLogoTux></IoLogoTux></TitleBoard>;
                 content = (<div className="content-body-fa">
                     <div className="content-body">
+                        <RoundSkillBar roundSize="8" logoSrc={ubuntuLogo} title="Ubuntu"
+                            barWidth="14" skillValue="70" color="rgb(233, 84, 32)" key="ubuntu"></RoundSkillBar>
                         <RoundSkillBar roundSize="8" logoSrc={dockerLogo} title="Docker"
-                            barWidth="14" skillValue="60" color="rgb(241, 101, 41)" key="docker"></RoundSkillBar>
+                            barWidth="14" skillValue="50" color="rgb(0, 147, 215)" key="docker"></RoundSkillBar>
                     </div>
                 </div>);
             }
