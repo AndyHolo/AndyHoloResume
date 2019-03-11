@@ -3,9 +3,12 @@
     .icon{
         border-radius: 50%;
         overflow: hidden;
+        .icon-img{
+            position: relative;
+        }
     }
     .label{
-        margin-left: 2em;
+        margin-left: 1.5em;
         .label-title{
             text-align: left;
             font-size: 1.5em;

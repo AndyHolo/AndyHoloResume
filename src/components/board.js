@@ -15,6 +15,11 @@ import javaLogo from '../assets/java.svg';
 import { IoMdPulse } from 'react-icons/io';
 import springLogo from '../assets/spring.svg';
 import vertxLogo from '../assets/vert-x.png';
+import postgresqlLogo from '../assets/elephant.png';
+import nodejsLogo from '../assets/nodejs.svg';
+import golangLogo from '../assets/golang.svg';
+import { IoLogoTux } from 'react-icons/io';
+import dockerLogo from '../assets/docker.png';
 
 export class Board extends React.Component {
     constructor(props) {
@@ -53,17 +58,15 @@ export class Board extends React.Component {
                 content = (<div className="content-body-fa">
                     <div className="content-body">
                         <RoundSkillBar roundSize="8" logoSrc={htmlLogo} title="Html"
-                            barWidth="14" skillValue="70" color="rgb(241, 101, 41)"></RoundSkillBar>
+                            barWidth="14" skillValue="70" color="rgb(241, 101, 41)" key="html"></RoundSkillBar>
                         <RoundSkillBar roundSize="8" logoSrc={cssLogo} title="CSS"
-                            barWidth="14" skillValue="60" color="rgb(41, 101, 241)"></RoundSkillBar>
+                            barWidth="14" skillValue="60" color="rgb(41, 101, 241)" key="css"></RoundSkillBar>
                         <RoundSkillBar roundSize="8" logoSrc={javascriptLogo} title="JavaScript"
-                            barWidth="14" skillValue="75" color="rgb(247, 223, 30)"></RoundSkillBar>
+                            barWidth="14" skillValue="75" color="rgb(247, 223, 30)" key="javascript"></RoundSkillBar>
                         <RoundSkillBar roundSize="8" logoSrc={reactLogo} title="ReactJS"
-                            barWidth="14" skillValue="50" color="#61dafb"></RoundSkillBar>
+                            barWidth="14" skillValue="50" color="#61dafb" key="reactjs"></RoundSkillBar>
                         <RoundSkillBar roundSize="8" logoSrc={angularLogo} title="Angular"
-                            barWidth="14" skillValue="90" color="rgb(218, 56, 56)"></RoundSkillBar>
-                        <RoundSkillBar roundSize="8" logoSrc={vertxLogo} title="Vert.X" iconTop='1' iconHeight='5'
-                            barWidth="14" skillValue="40" color="rgb(247, 223, 30)" iconWidth="8"></RoundSkillBar>
+                            barWidth="14" skillValue="90" color="rgb(218, 56, 56)" key="angular"></RoundSkillBar>
                     </div>
                 </div>);
                 break;
@@ -73,18 +76,29 @@ export class Board extends React.Component {
                 content = (<div className="content-body-fa">
                     <div className="content-body">
                         <RoundSkillBar roundSize="8" logoSrc={javaLogo} title="Java"
-                            barWidth="14" skillValue="75" color="rgb(241, 101, 41)"></RoundSkillBar>
+                            barWidth="14" skillValue="75" color="rgb(241, 101, 41)" key="java"></RoundSkillBar>
                         <RoundSkillBar roundSize="8" logoSrc={springLogo} title="Spring"
-                            barWidth="14" skillValue="50" color="rgb(41, 101, 241)"></RoundSkillBar>
-                        <RoundSkillBar roundSize="8" logoSrc={vertxLogo} title="Vert.X" iconTop='1' iconHeight='5'
-                            barWidth="14" skillValue="40" color="rgb(247, 223, 30)" iconWidth="8"></RoundSkillBar>
-                        <RoundSkillBar roundSize="8" logoSrc={reactLogo} title="ReactJS"
-                            barWidth="14" skillValue="50" color="#61dafb"></RoundSkillBar>
-                        <RoundSkillBar roundSize="8" logoSrc={angularLogo} title="Angular"
-                            barWidth="14" skillValue="90" color="rgb(218, 56, 56)"></RoundSkillBar>
+                            barWidth="14" skillValue="50" color="rgb(119, 188, 31)" key="spring"></RoundSkillBar>
+                        <RoundSkillBar roundSize="8" logoSrc={vertxLogo} title="Vert.X" iconTop='2' iconHeight='4'
+                            barWidth="14" skillValue="40" color="rgb(120, 42, 144)" iconWidth="8" key="vertx"></RoundSkillBar>
+                        <RoundSkillBar roundSize="8" logoSrc={postgresqlLogo} title="Postgresql" iconTop='1.5' iconHeight='5'
+                            barWidth="14" skillValue="80" color="rgb(50, 102, 144)" iconWidth="5" key="postgresql"></RoundSkillBar>
+                        <RoundSkillBar roundSize="8" logoSrc={nodejsLogo} title="NodeJS"
+                            barWidth="14" skillValue="60" color="rgb(105, 161, 92)" key="nodejs"></RoundSkillBar>
+                        <RoundSkillBar roundSize="8" logoSrc={golangLogo} title="Golang"
+                            barWidth="14" skillValue="40" color="rgb(0, 172, 215)" key="golang"></RoundSkillBar>
                     </div>
                 </div>);
                 break;
+            }
+            case (2): {
+                contentTitle = <TitleBoard content="System administration skills"><IoLogoTux></IoLogoTux></TitleBoard>;
+                content = (<div className="content-body-fa">
+                    <div className="content-body">
+                        <RoundSkillBar roundSize="8" logoSrc={dockerLogo} title="Docker"
+                            barWidth="14" skillValue="60" color="rgb(241, 101, 41)" key="docker"></RoundSkillBar>
+                    </div>
+                </div>);
             }
         }
         return (
