@@ -20,10 +20,11 @@ export class RoundSkillBar extends React.Component {
                 height: props.roundSize + 'em',
                 width: props.barWidth + 'vw'
             },
-            barContentStyles: {
-                width: ((props.skillValue / 100) * props.barWidth) + 'vw',
-                backgroundColor: props.color
-            }
+        };
+        this.barContentStyles = {
+            width: '0%',
+            //width: ((props.skillValue / 100) * props.barWidth) + 'vw',
+            backgroundColor: props.color,
         }
         if (props.iconTop !== undefined && props.iconTop !== null) {
             this.state.iconStyles['top'] = props.iconTop + 'em';
@@ -35,6 +36,11 @@ export class RoundSkillBar extends React.Component {
         if (props.iconWidth !== undefined && props.iconWidth !== null) {
             this.state.iconStyles.width = props.iconWidth + 'em';
         }
+        setTimeout(() => {
+            console.log('transition!!!');
+            this.barContentStyles = { width: ((props.skillValue / 100) * props.barWidth) + 'vw',
+            backgroundColor: props.color};
+        }, 200);
     }
     render() {
         return (
@@ -45,7 +51,7 @@ export class RoundSkillBar extends React.Component {
                 <div className="label" style={this.state.labelStyles}>
                     <div className="label-title">{this.props.title}</div>
                     <div className="label-bar">
-                        <div className="bar-content" style={this.state.barContentStyles}></div>
+                        <div className="bar-content" style={this.barContentStyles}></div>
                     </div>
                 </div>
             </div>

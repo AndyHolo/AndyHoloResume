@@ -21,7 +21,21 @@
             .bar-content{
                 height:0.8em;
                 border-radius: 0.5em;
+                //animation-name: get-fat;
+                //animation-timing-function: linear;
+                //animation-duration: 5s;
+                transition-property: all;
+                transition-duration: 5s linear;
             }
         }
+    }
+}
+
+@keyframes get-fat{
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: auto;
     }
 }
