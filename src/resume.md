@@ -6,6 +6,9 @@
  - 期望职位：java或web
  - TEL. 17368122570
  - Email tangjunanskd@hotmail.com
+
+ # 自我介绍
+    热爱技术的自我驱动型开发者，拥抱变化。自学能力强能够熟练阅读英文文档。
  
 # 工作经历
 
@@ -21,15 +24,11 @@
 - 电子门户网页维护
 - 后台数据维护
 
-# 技能清单
-以下均为我熟练使用的技能
+# 技能
 
-- Web开发：PHP/Hack/Node
-- Web框架：ThinkPHP/Yaf/Yii/Lavarel/LazyPHP
-- 前端框架：Bootstrap/AngularJS/EmberJS/HTML5/Cocos2dJS/ionic
-- 前端工具：Bower/Gulp/SaSS/LeSS/PhoneGap
-- 数据库相关：MySQL/PgSQL/PDO/SQLite
-- 版本管理、文档和自动化部署工具：Svn/Git/PHPDoc/Phing/Composer
-- 单元测试：PHPUnit/SimpleTest/Qunit
-- 云和开放平台：SAE/BAE/AWS/微博开放平台/微信应用开发
-      
+- Web开发：Html css javascript typescript scss RxJS
+- Web框架：Angular Reactjs
+- 后台开发: Java Springboot Hibernate Vert.x NodeJS
+- 数据库相关：Postgresql Mysql
+- 运维技术: ubuntu Docker kvm
+- 机器学习: 监督学习 无监督学习 聚类等
