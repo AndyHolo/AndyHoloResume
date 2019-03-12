@@ -12,7 +12,7 @@ class BigIconTitle extends React.Component {
                 <span className="title">
                     <span>{this.props.title}</span>
                 </span>
-                <LineBreaker length="25%"></LineBreaker>
+                <LineBreaker length="25%" color='white'></LineBreaker>
             </div>
         )
     }

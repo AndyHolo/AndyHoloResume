@@ -1,0 +1,19 @@
+.card{
+    height: 30em;
+    width: 20em;
+    display: block;
+    background-color: white;
+    .card-img{
+        .img-content{
+            max-width: 100%;
+        }
+    }
+    .card-content{
+        .card-title{
+            font-size: 2em;
+            font-weight: 600;
+            color: rgba(0, 0, 0, 0.7);
+            font-family: Tahoma, Geneva, Verdana, sans-serif;
+        }
+    }
+}

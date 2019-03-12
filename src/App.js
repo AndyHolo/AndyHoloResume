@@ -6,8 +6,8 @@ import Cube from './components/cube-component';
 import getRandomIntInclusive from './lib'
 import BigIconTitle from './components/big-icon-title';
 import { Titleboard } from './components/title-board';
-import { MdFace } from 'react-icons/md';
-import { MdBuild } from 'react-icons/md';
+import { MdFace, IoMdBriefcase } from 'react-icons/md';
+import { MdBuild, MdWork } from 'react-icons/md';
 import { IoMdGlobe } from 'react-icons/io';
 import { IoMdConstruct } from 'react-icons/io';
 import { FaLinux } from 'react-icons/fa';
@@ -16,6 +16,7 @@ import { SkillBar } from './components/skill-bar';
 import { Board } from './components/board';
 import reactLogo from './logo.svg';
 import angularLogo from './assets/angular.svg';
+import { Experience } from './components/experience';
 
 class App extends Component {
     id = 0;
@@ -115,13 +116,12 @@ class App extends Component {
                         </BigIconTitle>
                     </div>
                     <Board></Board>
-                    <div className="skill-board">
-                        <SkillBar logoSrc={angularLogo} skillValue="80" color="lightgreen"></SkillBar>
-                        <SkillBar logoSrc={reactLogo} skillValue="50" color="#dadc61"></SkillBar>
-                        <SkillBar logoSrc={reactLogo} skillValue="50" color="#dadc61"></SkillBar>
-                        <SkillBar logoSrc={reactLogo} skillValue="50" color="#dadc61"></SkillBar>
-                        <SkillBar logoSrc={reactLogo} skillValue="50" color="#dadc61"></SkillBar>
+                    <div className='title'>
+                        <BigIconTitle title="Work experiences">
+                            <MdWork className="icon"></MdWork>
+                        </BigIconTitle>
                     </div>
+                    <Experience></Experience>
                 </div>
                 {this.state.cubes.map((props) =>
                     <Cube duration={props.duration} key={props.id}></Cube>)}

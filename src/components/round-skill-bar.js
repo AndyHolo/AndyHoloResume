@@ -1,5 +1,6 @@
 import React from 'react';
 import './round-skill-bar.scss';
+import { CSSTransition } from 'react-transition-group';
 
 export class RoundSkillBar extends React.Component {
     constructor(props) {
@@ -20,12 +21,9 @@ export class RoundSkillBar extends React.Component {
                 height: props.roundSize + 'em',
                 width: props.barWidth + 'vw'
             },
+            per: '0%'
         };
-        this.barContentStyles = {
-            width: '0%',
-            //width: ((props.skillValue / 100) * props.barWidth) + 'vw',
-            backgroundColor: props.color,
-        }
+        this.barContentStyles = this.barContentStyles1;
         if (props.iconTop !== undefined && props.iconTop !== null) {
             this.state.iconStyles['top'] = props.iconTop + 'em';
         }
@@ -38,10 +36,12 @@ export class RoundSkillBar extends React.Component {
         }
         setTimeout(() => {
             console.log('transition!!!');
-            this.barContentStyles = { width: ((props.skillValue / 100) * props.barWidth) + 'vw',
-            backgroundColor: props.color};
-        }, 200);
+            this.setState((state, props) => ({
+                per: props.skillValue + '%'
+            }))
+        }, 500);
     }
+
     render() {
         return (
             <div className="round-skill">
@@ -51,7 +51,7 @@ export class RoundSkillBar extends React.Component {
                 <div className="label" style={this.state.labelStyles}>
                     <div className="label-title">{this.props.title}</div>
                     <div className="label-bar">
-                        <div className="bar-content" style={this.barContentStyles}></div>
+                        <div className="bar-content" style={{ backgroundColor: this.props.color, width: this.state.per }}></div>
                     </div>
                 </div>
             </div>
